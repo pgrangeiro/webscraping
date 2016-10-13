@@ -14,9 +14,6 @@ https://github.com/stummjr/pybr12-tutorial/
 - Utilizações
   - Monitoramento de preços
 
-- Parser HTMLs
-  - BeautifulSoup
-
 - Spiders
   - No Scrapy, são os crawlers em si
 
@@ -30,4 +27,21 @@ scrapy list
 ```sh
 scrapy crawl _nome_spider_
 ```
+- Inspecionar objetos da url a ser crawleada
+```sh
+scrapy shell _url_
+```
+Usando o Scrapy Shell para a url _http://quotes.toscrape.com/page/1/_ por exemplo:
+```sh
+>>> quote = response.css('div.quote')[0]
+>>> authors = quote.css('small.author::text').extract()
+>>> for author in authors: print(author)
+```
 
+## Ferramentas para extração
+- No browser
+  - Inspect do browser
+    - Utilizado para descobrir a estrutura
+  - Selector Gadget
+- BeautifulSoup
+- Scrapy Shell

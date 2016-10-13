@@ -15,6 +15,7 @@ class FirstSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
+        # Metódo responsável pela extração dos dados da página visitada
         filename = '%s.html' % response.url.split('/')[-2]
 
         with open(filename, 'w') as f:
