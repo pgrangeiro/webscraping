@@ -45,3 +45,13 @@ Usando o Scrapy Shell para a url _http://quotes.toscrape.com/page/1/_ por exempl
   - Selector Gadget
 - BeautifulSoup
 - Scrapy Shell
+
+## Macetes do Scrapy Shell
+- response.css('selector::text')
+  - Retorna o texto do selector
+- response.css('selector').extract_first()
+  - Retorna o primeiro seletor em formato texto
+- response.css('selector').extract()
+  - Retorna o seletor em formato texto
+- response.urljoin(path)
+  - Junta a url atual da requisição com o valor do parâmetro path
