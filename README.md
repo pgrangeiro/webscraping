@@ -38,6 +38,11 @@ Usando o Scrapy Shell para a url _http://quotes.toscrape.com/page/1/_ por exempl
 >>> for author in authors: print(author)
 ```
 
+- Criar um spider básico
+```sh
+scrapy genspider _name_ _url_
+```
+
 ## Ferramentas para extração
 - No browser
   - Inspect do browser
