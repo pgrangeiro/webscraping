@@ -60,3 +60,5 @@ scrapy genspider _name_ _url_
   - Retorna o seletor em formato texto
 - response.urljoin(path)
   - Junta a url atual da requisição com o valor do parâmetro path
+- import pudb; pu.db
+  - Pausa o crawler pra depuração
