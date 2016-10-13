@@ -8,15 +8,11 @@ class FirstSpider(scrapy.Spider):
     # Todo spider tem que ter um nome
     name = 'First'
 
-    def start_requests(self):
-        # Tem que implementar um método responsável por fazer as requisições
-        urls = [
-            'http://quotes.toscrape.com/page/1/',
-            'http://quotes.toscrape.com/page/2/',
-        ]
-
-        for url in urls:
-            yield scrapy.Request(url, callback=self.parse)
+    # Se for usar o Request do próprio scrapy, basta apenas definir este attr com as uls a serem crawleadas
+    start_urls = [
+        'http://quotes.toscrape.com/page/1/',
+        'http://quotes.toscrape.com/page/2/',
+    ]
 
     def parse(self, response):
         filename = '%s.html' % response.url.split('/')[-2]
